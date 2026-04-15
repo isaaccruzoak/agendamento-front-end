@@ -5,7 +5,7 @@ import axios from 'axios'
 const ADMIN_KEY = import.meta.env.VITE_ADMIN_KEY || ''
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://agendamento-production-3f08.up.railway.app/api',
   timeout: 15000,
   headers: {
     'x-admin-key': ADMIN_KEY,
